@@ -23,7 +23,7 @@ public class AddressBook {
 		do {
 
 			System.out.println("Choose Operation you want to do");
-			System.out.println("1. Add\t2.Edit\t3.Delete\t4.sortCity");
+			System.out.println("1. Add\t2.Edit\t3.Delete\t4.sortCity\t5.sortState\t6.show");
 			switch (scan.nextInt()) {
 			case 1:
 				add();
@@ -36,6 +36,10 @@ public class AddressBook {
 				break;
 			case 4:
 				sortCity();
+			case 5:
+				sortState();
+			case 6:
+				print();
 			default:
 				status = false;
 			}
@@ -147,6 +151,10 @@ public class AddressBook {
 
 	public void sortCity() {
 		Collections.sort(list, Sort.compareCity);
+	}
+
+	public void sortState() {
+		Collections.sort(list, Sort.compareState);
 	}
 
 	@Override
