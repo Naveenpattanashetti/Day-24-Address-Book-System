@@ -23,7 +23,8 @@ public class AddressBook {
 		do {
 
 			System.out.println("Choose Operation you want to do");
-			System.out.println("1. Add\t2.Edit\t3.Delete\t4.sortCity\t5.sortState\t6.show");
+			System.out.println("1. Add\t2.Edit\t3.Delete\t4.sortCity\t5.sortState\t6.show\t7.Count");
+
 			switch (scan.nextInt()) {
 			case 1:
 				add();
@@ -40,6 +41,8 @@ public class AddressBook {
 				sortState();
 			case 6:
 				print();
+			case 7:
+				countList();
 			default:
 				status = false;
 			}
@@ -147,6 +150,11 @@ public class AddressBook {
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
+	}
+
+	public void countList() {
+		Long total = list.stream().count();
+		System.out.println(total);
 	}
 
 	public void sortCity() {
