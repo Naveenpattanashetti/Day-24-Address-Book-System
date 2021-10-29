@@ -80,8 +80,4 @@ public class Contacts {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	protected void remove(Contacts contacts) {
-
-	}
 }

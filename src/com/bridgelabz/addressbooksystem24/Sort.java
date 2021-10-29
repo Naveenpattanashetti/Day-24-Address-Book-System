@@ -3,6 +3,7 @@ package com.bridgelabz.addressbooksystem24;
 import java.util.Comparator;
 
 public class Sort {
+	Contacts contacts = new Contacts();
 	static Comparator<Contacts> compareCity = new Comparator<Contacts>() {
 		public int compare(Contacts one, Contacts two) {
 			return one.getCity().compareTo(two.getCity());
@@ -19,5 +20,9 @@ public class Sort {
 			return one.getFirstName().compareTo(two.getFirstName());
 		}
 	};
-
+	static Comparator<Contacts> compareZip = new Comparator<Contacts>() {
+		public int compare(Contacts one, Contacts two) {
+			return one.getZip().compareTo(two.getZip());
+		}
+	};
 }
